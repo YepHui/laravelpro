@@ -52,5 +52,6 @@ class TestController extends Controller
         }*/
 
         return response()->json($tRank);
+        echo "testaaaaa";
     }
 }
