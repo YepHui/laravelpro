@@ -13,6 +13,7 @@ use App\Models\Trank;
 
 class TrankController extends Controller
 {
+    //查询数据
     public function orm1(){
 //        all();
 //        $tranks=Trank::all();
@@ -37,6 +38,7 @@ class TrankController extends Controller
         $max=Trank::where('pid','>','10')->max('age');
         var_dump($max);
     }
+    //新增数据
     public function orm2(){
 //        使用模型的Create方法新增数据
 //        $trank=Trank::create(
@@ -56,6 +58,7 @@ class TrankController extends Controller
         dd($bool);
 
     }
+    //更新数据
     public function orm3(){
         //通过模型更新数据
 //        $trank=Trank::find(11);
@@ -68,6 +71,7 @@ class TrankController extends Controller
         );
         var_dump($num);
     }
+    //删除数据
     public function orm4(){
         //通过模型删除
 //        $trank=Trank::find(15);
