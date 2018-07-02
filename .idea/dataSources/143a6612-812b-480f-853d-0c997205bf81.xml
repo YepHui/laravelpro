@@ -855,114 +855,140 @@
     <table id="219" parent="12" name="userinfo">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="220" parent="216" name="adminid">
+    <table id="220" parent="12" name="wx_access_token">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="221" parent="216" name="adminid">
       <Position>1</Position>
       <Comment>管理员账号</Comment>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="221" parent="216" name="password">
+    <column id="222" parent="216" name="password">
       <Position>2</Position>
       <Comment>管理员密码</Comment>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="222" parent="216" name="PRIMARY">
+    <key id="223" parent="216" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>adminid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="223" parent="217" name="albumname">
+    <column id="224" parent="217" name="albumname">
       <Position>1</Position>
       <Comment>专辑名</Comment>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="224" parent="217" name="performer">
+    <column id="225" parent="217" name="performer">
       <Position>2</Position>
       <Comment>表演者</Comment>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="225" parent="217" name="publisher">
+    <column id="226" parent="217" name="publisher">
       <Position>3</Position>
       <Comment>出版者</Comment>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="226" parent="217" name="publishtime">
+    <column id="227" parent="217" name="publishtime">
       <Position>4</Position>
       <Comment>出版时间</Comment>
       <DataType>datetime|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="227" parent="217" name="schools">
+    <column id="228" parent="217" name="schools">
       <Position>5</Position>
       <Comment>流派</Comment>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="217" name="introduction">
+    <column id="229" parent="217" name="introduction">
       <Position>6</Position>
       <Comment>简介</Comment>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="229" parent="217" name="PRIMARY">
+    <key id="230" parent="217" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>albumname</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="230" parent="218" name="pid">
+    <column id="231" parent="218" name="pid">
       <Position>1</Position>
       <DataType>int(4)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="218" name="NAME">
+    <column id="232" parent="218" name="NAME">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="218" name="age">
+    <column id="233" parent="218" name="age">
       <Position>3</Position>
       <DataType>int(3)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="218" name="groupid">
+    <column id="234" parent="218" name="groupid">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="234" parent="218" name="PRIMARY">
+    <key id="235" parent="218" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>pid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="235" parent="219" name="username">
+    <column id="236" parent="219" name="username">
       <Position>1</Position>
       <Comment>用户姓名</Comment>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="219" name="passwd">
+    <column id="237" parent="219" name="passwd">
       <Position>2</Position>
       <Comment>用户密码</Comment>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="237" parent="219" name="PRIMARY">
+    <key id="238" parent="219" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="239" parent="220" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="240" parent="220" name="access_token">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="241" parent="220" name="create_time">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="242" parent="220" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

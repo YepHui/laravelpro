@@ -87,3 +87,8 @@ Route::any('orm1',['uses'=>'TrankController@orm1']);
 Route::any('orm2',['uses'=>'TrankController@orm2']);
 Route::any('orm3',['uses'=>'TrankController@orm3']);
 Route::any('orm4',['uses'=>'TrankController@orm4']);
+Route::match(['get','post'],'/index','IndexController@index');
+
+
+Route::any('wx', 'Wx\WxController@checkWx');
+Route::any('testqueue','TestQueueController@index');
